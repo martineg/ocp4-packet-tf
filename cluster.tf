@@ -7,7 +7,7 @@ resource "packet_device" "bootstrap" {
   operating_system = local.packet_cluster_os
   ipxe_script_url  = "http://${packet_device.bastion.access_public_ipv4}:8080/packetstrap/bootstrap.boot"
   billing_cycle    = local.packet_billing_cycle
-  project_id       = var.project_id
+  project_id       = var.packet_project_id
 
   depends_on = [
     packet_device.bastion
@@ -24,7 +24,7 @@ resource "packet_device" "master" {
   operating_system = local.packet_cluster_os
   ipxe_script_url  = "http://${packet_device.bastion.access_public_ipv4}:8080/packetstrap/master.boot"
   billing_cycle    = local.packet_billing_cycle
-  project_id       = var.project_id
+  project_id       = var.packet_project_id
 
   depends_on = [
     packet_device.bastion
@@ -42,7 +42,7 @@ resource "packet_device" "worker" {
   operating_system = local.packet_cluster_os
   ipxe_script_url  = "http://${packet_device.bastion.access_public_ipv4}:8080/packetstrap/worker.boot"
   billing_cycle    = local.packet_billing_cycle
-  project_id       = var.project_id
+  project_id       = var.packet_project_id
 
   depends_on = [
     packet_device.bastion

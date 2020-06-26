@@ -5,7 +5,7 @@ resource "packet_device" "bastion" {
   facilities       = local.packet_facility
   operating_system = "rhel_7"
   billing_cycle    = local.packet_billing_cycle
-  project_id       = var.project_id
+  project_id       = var.packet_project_id
 
   provisioner "file" {
     destination = "/root/bootstrap.sh"

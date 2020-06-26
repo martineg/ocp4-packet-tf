@@ -1,8 +1,8 @@
-variable auth_token {
+variable packet_auth_token {
   type = string
 }
 
-variable project_id {
+variable packet_project_id {
   type = string
 }
 
