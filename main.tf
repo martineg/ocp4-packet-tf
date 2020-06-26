@@ -1,10 +1,15 @@
 terraform {
   required_providers {
     packet = "~> 2.9"
+    aws    = "~> 2.68"
   }
 }
 provider "packet" {
-  auth_token = var.auth_token
+  auth_token = var.packet_auth_token
+}
+
+provider "aws" {
+  region = "eu-north-1"
 }
 
 locals {
