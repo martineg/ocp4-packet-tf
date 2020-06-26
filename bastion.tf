@@ -10,12 +10,13 @@ resource "packet_device" "bastion" {
   provisioner "file" {
     destination = "/root/bootstrap.sh"
     content = templatefile("bootstrap.tpl", {
-      rhsm_user_name   = var.rhsm_user_name
-      rhsm_password    = var.rhsm_password
-      rhsm_pool_id     = var.rhsm_pool_id
-      ocp4_base_domain = var.ocp4_base_domain
-      pull_secret      = file(var.ocp4_pull_secret_file)
-      ssh_key          = file(var.ocp4_public_key_file)
+      rhsm_user_name    = var.rhsm_user_name
+      rhsm_password     = var.rhsm_password
+      rhsm_pool_id      = var.rhsm_pool_id
+      ocp4_cluster_name = var.ocp4_cluster_name
+      ocp4_base_domain  = var.ocp4_base_domain
+      pull_secret       = file(var.ocp4_pull_secret_file)
+      ssh_key           = file(var.ocp4_public_key_file)
     })
 
     connection {

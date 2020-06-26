@@ -18,6 +18,9 @@ variable rhsm_pool_id {
   type = string
 }
 
+variable ocp4_cluster_name {
+  type = string
+}
 variable ocp4_base_domain {
   type = string
 }

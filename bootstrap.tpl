@@ -143,7 +143,7 @@ controlPlane:
   name: master 
   replicas: 3 
 metadata:
-  name: bm-hub
+  name: ${ocp4_cluster_name}
 networking:
   clusterNetwork:
   - cidr: 10.128.0.0/14 
