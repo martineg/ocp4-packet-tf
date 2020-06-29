@@ -2,6 +2,7 @@ terraform {
   required_providers {
     packet = "~> 2.9"
     aws    = "~> 2.68"
+    null   = "~> 2.1"
   }
 }
 provider "packet" {

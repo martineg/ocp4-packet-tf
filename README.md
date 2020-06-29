@@ -21,7 +21,7 @@ export AWS_ACCESS_KEY_ID=accesskey
 export AWS_SECRET_ACCESS_KEY=secretkey
 ````
 
-Run `terraform plan && terraform apply` to provision the infrastructure and start the cluster bootstrap process. When nodes have been provisioned, make sure to update HAproxy configuration on the bastion host with correct IP addresses.
+Run `terraform plan && terraform apply` to provision the infrastructure and start the cluster bootstrap process.
 
 Now you can watch and wait to see if the deployment returns
 
