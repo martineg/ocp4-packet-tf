@@ -25,6 +25,10 @@ variable ocp4_base_domain {
   type = string
 }
 
+variable ocp4_install_image {
+  type = string
+}
+
 variable ocp4_pull_secret_file {
   type = string
 }
