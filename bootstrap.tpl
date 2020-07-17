@@ -30,6 +30,9 @@ firewall-cmd --add-port=2049/udp
 firewall-cmd --add-port=32803/udp
 firewall-cmd --runtime-to-permanent
 
+# podman to run cerberus for post-deploy validation
+yum install podman -y
+
 # haproxy
 yum install haproxy -y
 
