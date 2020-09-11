@@ -1,8 +1,17 @@
 terraform {
   required_providers {
-    packet = "~> 2.9"
-    aws    = "~> 2.68"
-    null   = "~> 2.1"
+    packet = {
+      source  = "terraform-providers/packet"
+      version = "~> 2.9"
+    }
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 2.68"
+    }
+    null = {
+      source  = "hashicorp/null"
+      version = "~> 2.1"
+    }
   }
 }
 provider "packet" {
